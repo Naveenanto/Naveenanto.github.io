@@ -1,0 +1,57 @@
+<div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+        <div>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a style="margin-left: 10px" class="brand" href="#">CEG-CSE</a>
+
+            <div class="nav-collapse collapse navbar-responsive-collapse">
+
+
+                <ul class="nav pull-right" ng-init="show=1">
+
+                    <li><a href="#"><i class="icon-home" style="font-size: 18px;margin-right: 10px;"></i>
+                        <span ng-show="show" >Home</span>
+                    </a></li>
+
+                    <li class="divider-vertical"></li>
+                    <li ><a href="#/experts"><i class="icon-user-3" style="font-size: 18px;margin-right: 10px"></i>
+                        <span ng-show="show">Experts</span>
+                    </a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="#/placements"><i class="icon-medal" style="font-size: 18px;margin-right: 10px"></i>
+                        <span ng-show="show">Placements</span>
+                    </a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="#/students"><i class="icon-user" style="font-size: 18px;margin-right: 10px"></i>
+                        <span ng-show="show">Members</span>
+                    </a></li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="#"><i class="icon-lamp" style="font-size: 18px;margin-right: 10px"></i>
+                        <span ng-show="show">Ideas</span>
+                    </a></li>
+                    <li class="divider-vertical"></li>
+
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-accessibility-2" style="font-size: 20px;margin-right: 10px"></i>Login <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        <center>
+                            <form class="form-inline" id="loginForm">
+                                <i class="icon-user-2"></i><input id="rollno" type="text" class="input-large" placeholder="Your Roll No">
+                                <i class="icon-key"></i><input id="password" type="password" class="input-large" placeholder="The Password">
+
+                                <button type="submit" style="width:75%;margin-top: 15px" class="btn">Sign in</button>
+                            </form>
+                        </center>
+                        </ul>
+                    </li>
+                    <li class="divider-vertical"></li>
+                    <li><a href="" ng-click="show=!show"><i class="{{(show)?'icon-eye-close icon-white':'icon-eye-open icon-white'}}" style="font-size: 18px;margin-right: 10px;margin-top: 5px;"></i></a> </li>
+                </ul>
+            </div><!-- /.nav-collapse -->
+        </div>
+    </div><!-- /navbar-inner -->
+</div>

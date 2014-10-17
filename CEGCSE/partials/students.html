@@ -1,0 +1,46 @@
+<div class="studentYear">
+
+    <div class="row filterHolder">
+
+
+
+    </div>
+    <div class="studentsholder">
+
+        <ul class="studentList">
+            <li >
+                <a class="students">
+
+                    <img style="float: left;" class="img idPic" width="60" height="100" src="http://ceg.annauniv.edu/images/stud_photos/2009101005.jpg">
+                    <div class="idFilter">
+                        <h3 align="center">Filter</h3>
+                        <span><i class="icon-user"></i> <input type="search" ng-model="searchName" placeholder="Search Name"></span>
+                        <span><i class="icon-bookmark"></i> <input type="search" ng-model="searchRoll" placeholder="Search RollNo"></span>
+                        <span><i class="icon-location"></i>
+                        <select ng-model="year">
+                            <option></option>
+                            <option>First</option>
+                            <option>Second</option>
+                            <option>Third</option>
+                            <option>Fourth</option>
+                        </select>
+                        </span>
+                    </div>
+                </a>
+
+            </li>
+            <li  ng-repeat="people in user| filter:year| filter: searchName| filter: searchRoll| orderBy: 'name'">
+                <a href="#/students/{{people.rollno}}" class="img-polaroid students">
+                <div class="idContent">
+                    <span><i class="icon-user"></i> &nbsp;{{people.name}}</span>
+                    <span><i class="icon-bookmark"></i> &nbsp;{{people.rollno}}</span>
+                    <span><i class="icon-location"></i> &nbsp;{{people.year|uppercase}} </span>
+                </div>
+                </a>
+
+            </li>
+        </ul>
+
+    </div>
+
+</div>

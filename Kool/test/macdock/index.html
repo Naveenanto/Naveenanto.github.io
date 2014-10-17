@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+	<style type="text/css">
+     * { margin:0; padding:0;}
+    body {
+        background: url('space.jpg') no-repeat center top;
+        text-align: center;
+    }
+    </style>
+    
+    <link rel="stylesheet" type="text/css" href="dashboard.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="theme.default/default.css" media="all" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        jQuery.fn.center = function () {
+            this.css("left", ( $(window).width() - this.width() ) / 2 + $(window).scrollLeft() + "px");
+            return this;
+        }
+
+        //document ready
+        $(function(){
+            $('#dashboard').center();
+        });
+        
+        //window resize
+        $(window).resize(function() {
+            $('#dashboard').center();
+        });
+    </script>
+</head>
+<body>
+
+    
+    
+    <div id="dashboard">
+        <div id="left_shelf"></div>
+        <div id="shelf">
+            <ul id="menu_dashboard">
+                <li><a href="#"><img src="icons/apple.png" alt="Apple" /></a></li>
+                <li><a href="#"><img src="icons/home.png" alt="Home" /></a></li>
+                <li><a href="#"><img src="icons/safari.png" alt="Safari" /></a></li>
+                <li><a href="#"><img src="icons/tools.png" alt="Tools" /></a></li>
+                <li class="separator">&nbsp;</li>
+                <li><a href="#"><img src="icons/harddrive.png" alt="harddrive" /></a></li>
+            </ul>
+        </div>
+        <div id="right_shelf"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<div class="placementHolder">
+
+    <div class="listWrapper">
+
+
+
+        <ul class="placementCell" ng-hide="menu">
+
+            <li class="cell">
+                <i class="icon-search" id="searchName"></i>
+                <input type="search" class="expertsSearchName" placeholder="Search Cells">
+                <br>
+                <span class="leftSort" ng-click="rate = (rate||rate=='rating')?'':'rating'" > <i class="icon-star-2" style="color:{{(rate||rate=='rating')?'#fd0':''}}"></i> </span>
+                <span class="middleSort" ng-click="name = (name||name=='name')?'':'name'"> <i class="icon-amazon" style="color:{{(name||name=='name')?'#fd0':''}}"></i> </span>
+                <span class="rightSort" ng-click="sal = (sal||sal=='salary')?'':'salary'"> <i class="icon-dollar" style="color:{{(sal||sal=='salary')?'#fd0':''}}"></i> </span>
+            </li>
+
+            <li ng-repeat="comp in company|orderBy:rate|orderBy:name|orderBy:sal" class="cell">
+               {{comp.name}}
+                <span class="label label-important rating pull-left">{{comp.rating}} <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">{{comp.salary}} <i class="icon-dollar" ></i> </span>
+            </li>
+
+
+        </ul>
+
+    </div>
+    <i class="{{(menu)?'icon-arrow-right-2':'icon-arrow-left-2'}}" ng-click="menu=!menu" id="menuOpener"></i>
+</div>
+
+
+
+
+<!---  Other than menu -->
+
+<div class="placementTotal">
+
+
+<div class="placementPage">
+
+
+    <h3> </h3>
+    This is where placements details come!
+
+</div>
+
+</div>

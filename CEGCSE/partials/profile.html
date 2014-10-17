@@ -1,0 +1,62 @@
+<div class="profile">
+
+
+
+    <center>
+<ul>
+    <li ng-repeat="people in user| filter: id">
+
+
+
+
+        <table class="profileTable">
+            <tbody>
+
+                <tr>
+
+                    <td colspan="2"><img style="" class="profileImg" width="220" height="260" src="http://ceg.annauniv.edu/images/stud_photos/2009101005.jpg">
+                    <td><h2 align="center">{{people.name}}</h2></td>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="3%"><i class="icon-bookmark"></i></td>
+                    <td width="15%">Roll No</td>
+                    <td>{{people.rollno}}</td>
+                </tr>
+                <tr>
+                    <td width="3%"><i class="icon-location"></i></td>
+                    <td width="15%">Year</td>
+                    <td>{{people.year}}</td>
+                </tr>
+                <tr>
+                    <td width="3%"><i class="icon-air"></i></td>
+                    <td width="15%">Sex</td>
+                    <td>{{people.sex}}</td>
+                </tr>
+                <tr>
+                    <td width="3%"><i class="icon-address-book"></i></td>
+                    <td width="15%">Dept</td>
+                    <td>{{people.dept}}</td>
+                </tr>
+                <tr>
+                    <td width="3%"><i class="icon-at"></i></td>
+                    <td width="15%">Email</td>
+                    <td>google@gmail.com</td>
+                </tr>
+                <tr>
+                    <td width="3%"><i class="icon-star"></i></td>
+                    <td width="15%">Batch</td>
+                    <td>{{people.batch+" -batch"}}</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+
+    </li>
+</ul>
+    </center>
+</div>

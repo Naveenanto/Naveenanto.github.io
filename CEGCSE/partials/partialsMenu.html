@@ -1,0 +1,91 @@
+<div class="placementHolder">
+
+    <div class="listWrapper">
+
+
+
+        <ul class="placementCell" ng-hide="menu">
+
+            <li class="cell">
+                <i class="icon-search" id="searchName"></i>
+                <input type="search" class="expertsSearchName" placeholder="Search Cells">
+                <br>
+                <span class="leftSort"> <i class="icon-star-2"></i> </span>
+                <span class="middleSort"> <i class="icon-amazon"></i> </span>
+                <span class="rightSort"> <i class="icon-dollar"></i> </span>
+            </li>
+
+
+
+            <li ng-repeat="comp in company" class="cell">
+                comp.name
+                <span class="label label-important rating pull-left">comp.rating <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">comp.salary <i class="icon-dollar" ></i> </span>
+            </li>
+
+            <li class="cell">
+                Google
+                <span class="label label-important rating pull-left">5 <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">24 <i class="icon-dollar" ></i> </span>
+            </li>
+
+            <li class="cell">
+                Microsoft
+                <span class="label label-important rating pull-left">5 <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">24 <i class="icon-dollar" ></i> </span>
+            </li>
+
+            <li class="cell">
+                Amazon
+                <span class="label label-important rating pull-left">5 <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">24 <i class="icon-dollar" ></i> </span>
+            </li>
+
+            <li class="cell">
+                Morgan Stanely
+                <span class="label label-important rating pull-left">5 <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">24 <i class="icon-dollar" ></i> </span>
+            </li>
+
+            <li class="cell">
+                Goldman Sachs
+                <span class="label label-important rating pull-left">5 <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">24 <i class="icon-dollar" ></i> </span>
+            </li>
+
+            <li class="cell">
+                Accolite
+                <span class="label label-important rating pull-left">5 <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">24 <i class="icon-dollar" ></i> </span>
+            </li>
+
+            <li class="cell">
+                QualComm
+                <span class="label label-important rating pull-left">5 <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">24 <i class="icon-dollar" ></i> </span>
+            </li>
+
+            <li class="cell">
+                Zoho
+                <span class="label label-important rating pull-left">5 <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">24 <i class="icon-dollar" ></i> </span>
+            </li>
+
+            <li class="cell">
+                Tesco
+                <span class="label label-important rating pull-left">5 <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">24 <i class="icon-dollar" ></i> </span>
+            </li>
+
+            <li class="cell">
+                Samsung
+                <span class="label label-important rating pull-left">5 <i class="icon-star-2" ></i> </span>
+                <span class="label label-success package pull-right">24 <i class="icon-dollar" ></i> </span>
+            </li>
+
+        </ul>
+
+    </div>
+    <i class="{{(menu)?'icon-arrow-right-2':'icon-arrow-left-2'}}" ng-click="menu=!menu" id="menuOpener"></i>
+</div>
+
