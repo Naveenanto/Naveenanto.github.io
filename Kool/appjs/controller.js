@@ -78,10 +78,10 @@ angular.module('myAppcontrollers',[])
             url = url.replace(/\s/g, "-");
 
 
-            getService.content(url).success(function(data){
+            getService.Econtent(url).success(function(data){
                 console.log(data);
 
-                $scope.content = data;
+                $scope.econtent = data;
 
 
 
@@ -99,8 +99,57 @@ angular.module('myAppcontrollers',[])
 
     })
 
-    .controller('content',function($scope,$routeParams,getService){
 
+    .controller('workshopsMenu',function($scope,$routeParams,getService){
+        $scope.namo="";
+
+        getService.workshopTitle().success(function(data){
+            console.log(data);
+            $scope.wmenuItems = data;
+
+        })
+
+        $scope.fire = function(url){
+            url = url.toLowerCase();
+            url = url.replace(/\s/g, "-");
+
+
+            getService.Wcontent(url).success(function(data){
+                console.log(data);
+
+                $scope.wcontent = data;
+
+
+
+
+            })
+        }
+
+        $scope.callTab = function(id){
+
+            slider._showItem(id+1);
+        }
+
+
+
+    })
+
+
+    .controller('contact',function($scope,$routeParams,getService){
+
+            $scope.dept = "general";
+
+            getService.contact().success(function(data){
+                console.log(data);
+                $scope.contactDetails = data;
+            })
+
+        $scope.setVal = function(arg){
+            $scope.dept = arg;
+            console.log($scope.dept);
+
+
+        }
 
     })
 

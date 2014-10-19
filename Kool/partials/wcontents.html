@@ -10,7 +10,7 @@
                 <a href="https://tsovet.com/"><img src="img/content/2_screen.jpg"/></a>
             </div>
         </li>
-        <li ng-repeat="detail in content.event.tabs">
+        <li ng-repeat="detail in wcontent.workshop.tabs">
             <div class="description">
                 <h2>{{detail.title}}</h2>
                 <p compile="detail.content"></p>
@@ -33,7 +33,8 @@
     var slider = new TiltSlider( document.getElementById( 'slideshow' ) );
     $(document).ready(function(){
         var wheight = window.innerHeight - ($(".headerContainer").outerHeight()+$(".updates").outerHeight()+10);
-        $(".slides").css({'height':(wheight-30)+'px'});
+        $(".slides").css({'height':(wheight)+'px'});
+        $(".mp-level").css({'height':(wheight)+'px'});
     })
 
 

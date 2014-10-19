@@ -1,0 +1,56 @@
+
+<div class="contact">
+ <ul>
+       <li class="teams" ng-repeat="team in contactDetails.teams | limitTo:8" ng-click="setVal(team.name)">
+          <i class="icon-user"></i> <span ng-bind="team.name"  ></span>
+       </li>
+ </ul>
+
+
+    <div ng-repeat="team in contactDetails.teams | filter:dept" >
+    <ul class="mh-menu" id="members">
+        {{member}}
+        <li ng-repeat="member in team.members" contact-repeat>
+            <a href="#">
+                <span>{{member.phone}}</span>
+                <span>{{member.name}}</span>
+            </a>
+            <img src="{{member.avatar}}" alt="image01"/>
+        </li>
+
+    </ul>
+    </div>
+
+
+</div>
+
+
+
+
+        <!--
+
+<script type="text/javascript" src="js/vendor/slider/spons/modernizr.js"></script>
+<script type="text/javascript" src="js/vendor/slider/spons/jquery.windy.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $(".sponsor").each(function(id,elem){
+
+           var $el = $(this).children();
+            var windy = $el.windy();
+
+            $el.on('mouseover',function(){
+                windy.next();
+            })
+
+            $el.on('mouseleave',function(){
+                windy.prev();
+            })
+        })
+
+
+    });
+
+</script>
+-->

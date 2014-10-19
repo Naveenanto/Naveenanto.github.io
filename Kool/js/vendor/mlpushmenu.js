@@ -212,7 +212,8 @@
 			}
 
             $(".description").css({'width':78+"%"});
-            $(".tiltview").css({'width':90+"%",'opacity':0.3,'left':0});
+            $(".tiltview").css({'width':80+"%",'opacity':0.3,'left':0});
+
 
 			// add class mp-level-open to the opening level element
 			classie.add( subLevel || this.levels[0], 'mp-level-open' );

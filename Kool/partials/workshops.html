@@ -1,0 +1,60 @@
+
+<!-- Push Wrapper -->
+<div class="mp-pusher" id="mp-pusher" >
+
+    <!-- mp-menu -->
+    <nav id="mp-menu" class="mp-menu">
+        <div class="mp-level">
+            <h2 class="icon icon-world"> Categories</h2>
+
+            <ul>
+                <li ng-repeat="category in wmenuItems.workshopcategories"  class="icon icon-arrow-left" >
+                    <a href="#">{{category.name}}</a>
+                    <div class="mp-level">
+                        <h2 class="icon icon-display">{{category.name}}</h2>
+                        <a class="mp-back" href="#">back</a>
+                        <ul>
+                            <li ng-repeat="workshops in category.workshops" class="icon icon-arrow-left" >
+
+
+                                <a  ng-click="fire(workshops.name)">{{workshops.name}}</a>
+                                <div class="mp-level" >
+                                    <h2>{{workshops.name}}</h2>
+                                    <ul id="subMenuRule">
+                                        <li ng-repeat="tab in workshops.tabs" my-repeat-directive>
+                                            <a ng-click="callTab($index)">{{tab.title}}</a>
+                                        </li>
+                                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- /mp-menu -->
+
+    <div class="scroller"><!-- this is for emulating position fixed of the nav -->
+        <div class="scroller-inner">
+            <!-- Top Navigation -->
+
+            <div class="content clearfix">
+                <div class="block block-40 clearfix" style="z-index: 1000">
+                    <p><a href="#" id="trigger" class="menu-trigger"></a></p>
+                </div>
+
+                <div ng-include="'partials/wcontents.html'" style="margin-top: -25px;z-index: -2;margin-left: 35px;"></div>
+
+            </div>
+        </div><!-- /scroller-inner -->
+    </div><!-- /scroller -->
+
+</div><!-- /pusher -->
+
+<script type="text/javascript" src="js/vendor/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/vendor/classie.js"></script>
+<script type="text/javascript" src="js/vendor/mlpushmenu.js"></script>
+<script>
+
+</script>

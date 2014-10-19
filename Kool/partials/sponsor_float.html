@@ -1,0 +1,64 @@
+    <div class="sponsor windy-demo-2">
+        <ul id="wi-el" class="wi-container">
+            <li><img src="http://archive13.kurukshetra.org.in/assets/img/sponsors/aero360_p.jpg" alt="image1"/><h4>Coco Loko</h4></li>
+            <li><img src="http://archive13.kurukshetra.org.in/assets/img/sponsors/groupon.png" alt="image2"/><h4>Vermouth Land</h4></li>
+            <li><img src="img/slider/3.jpg" alt="image3"/><h4>Electrodynamics</h4></li>
+            <li><img src="img/slider/4.jpg" alt="image4"/><h4>Retinal Bliss</h4></li>
+            <li><img src="img/slider/5.jpg" alt="image5"/><h4>Disco Fever</h4></li>
+            <li><img src="img/slider/6.jpg" alt="image6"/><h4>Serenity</h4></li>
+            <li><img src="img/slider/7.jpg" alt="image7"/><h4>Dark Honor</h4></li>
+            <li><img src="img/slider/8.jpg" alt="image8"/><h4>Nested Happiness</h4></li>
+
+        </ul>
+        <nav>
+            <span id="nav-prev">prev</span>
+            <span id="nav-next">next</span>
+        </nav>
+    </div>
+
+
+<script type="text/javascript" src="js/vendor/slider/spons/modernizr.js"></script>
+<script type="text/javascript" src="js/vendor/slider/spons/jquery.windy.js"></script>
+        <script type="text/javascript">
+
+            $(function() {
+
+                var $el = $( '#wi-el' ),
+                        windy = $el.windy( {
+                            // rotation and translation boundaries for the items transitions
+                            boundaries : {
+                                rotateX : { min : 40 , max : 90 },
+                                rotateY : { min : -15 , max : 45 },
+                                rotateZ : { min : -10 , max : 10 },
+                                translateX : { min : -400 , max : 400 },
+                                translateY : { min : -400 , max : 400 },
+                                translateZ : { min : 350 , max : 550 }
+                            }
+                        } ),
+                        allownavnext = false,
+                        allownavprev = false;
+
+
+                var id = 0,flag = 0;
+
+                $el.on('mouseover',function(){
+                    flag = 1;
+                })
+
+                $el.on('mouseleave',function(){
+                    flag = 0;
+                })
+
+                function auto_nav(idx){
+                    if(!flag)
+                    windy.navigate(idx%(windy.itemsCount+1));
+
+                }
+
+                setInterval(function(){id = id + 1; auto_nav(id);},3000);
+
+
+
+            });
+
+        </script>

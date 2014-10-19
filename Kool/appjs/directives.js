@@ -21,7 +21,7 @@ angular.module('myAppDirectives', [])
                     self._resetMenu();
                 })
                 var wheight = window.innerHeight - ($(".headerContainer").outerHeight()+$(".updates").outerHeight()+10);
-                $(".slides").css({'height':(wheight-30)+'px'});
+                $(".slides").css({'height':(wheight)+'px'});
 
               //  debugger;
             }
@@ -32,6 +32,19 @@ angular.module('myAppDirectives', [])
             angular.element(element).css('border','5px solid red');
         };
     })
+
+    .directive('contactRepeat', function() {
+
+        return function(scope, element, attrs){
+            if(scope.$last){
+                var total = $("#members").children().length;
+                var wheight = window.innerHeight-300;
+                $("#members").css({'margin-top':(1/total)*160+'px'})
+            }
+        }
+
+    })
+
 
 .directive('compile', ['$compile', function ($compile) {
     return function(scope, element, attrs) {

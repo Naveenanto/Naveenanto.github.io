@@ -22,7 +22,7 @@ angular.module('myAppServices', []).
 		  
 	  }
 
-        challengeService.content = function(url){
+        challengeService.Econtent = function(url){
             return $http({
 
                 method:'GET',
@@ -31,8 +31,37 @@ angular.module('myAppServices', []).
         }
 
 
-	  
-	  return challengeService;
+        challengeService.workshopTitle = function(){
+
+            return $http({
+
+                method: 'GET',
+                url: 'workdata.json'
+
+            });
+
+        }
+
+        challengeService.Wcontent = function(url){
+            return $http({
+
+                method:'GET',
+                url: 'http://cms.kurukshetra.org.in/workshops/'+url+'.json'
+            })
+        }
+
+        challengeService.contact = function(){
+            return $http({
+
+                method:'GET',
+                url: 'http://cms.kurukshetra.org.in/teams.json'
+            })
+        }
+
+
+
+
+        return challengeService;
 	  
 	  
   })

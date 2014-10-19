@@ -5,7 +5,6 @@
     <title>Kurukshetra '15</title>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
     <link rel="stylesheet" type="text/css" href="css/iconFont.min.css">
     <link rel="stylesheet" type="text/css" href="css/Kstyle.css">
     <link rel="stylesheet" type="text/css" href="css/3dgallery.css">
@@ -13,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/component.css">
     <link rel="stylesheet" type="text/css" href="css/content/component.css">
     <link rel="stylesheet" type="text/css" href="css/slider/component.css">
+    <link rel="stylesheet" type="text/css" href="css/slider/style2.css">
     <style>
         #canvas2{
             position: fixed;
@@ -35,22 +35,22 @@
 <body ng-app="myApp" class="container-fluid">
 <div class="clouds"></div>
 
-
+<!--
 <canvas style="display: none" id="canvas" width="285" height="285"></canvas>
 <canvas style="display: none" id="canvas3" width="570" height="570"></canvas>
 <canvas id="canvas2" width="570" height="570">*** THIS BROWSER DOES NOT SUPPORT THE CANVAS ELEMENT ***</canvas>
-<div id="overlay"></div>
+<div id="overlay"></div>-->
 
 
 <div ng-include="'partials/header.html'"></div>
-<div ng-include="'partials/updates.html'"></div>
+<div ng-include="'partials/updates.html'" ng-controller="updates"></div>
+
+
 
 <div  class="row-fluid" style="overflow-x: hidden">
-    <div ng-view></div>
+    <div class="span12" ng-view></div>
+    <div class="span0"></div>
 </div>
-
-
-
 
 
 <div id="dashboard">
@@ -101,12 +101,10 @@
         $('#dashboard').center();
         var wheight = window.innerHeight - ($(".headerContainer").outerHeight()+$(".updates").outerHeight()+10);
         $("#photostack-3").css({'height':wheight+'px'});
-        $(".slides").css({'height':(wheight-30)+'px'});
-        $(".mp-level").css({'height':(wheight-30)+'px'});
+        $(".slides").css({'height':(wheight)+'px'});
+        $(".mp-level").css({'height':(wheight+10)+'px'});
     });
 </script>
-<script src="js/vendor/background/nebula.js"></script>
-
 <script type="text/javascript" src="js/angular/angular.min.js"></script>
 <script type="text/javascript" src="js/angular-route/angular-route.js"></script>
 <script type="text/javascript" src="appjs/app.js"></script>

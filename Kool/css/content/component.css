@@ -89,42 +89,42 @@
     -webkit-transform: translateY(-50%) rotateX(60deg) rotateZ(35deg);
     transform: translateY(-50%) rotateX(60deg) rotateZ(35deg);
 
-    -moz-animation: mymove 2.2s linear infinite;
-    -ms-animation: mymove 2.2s linear infinite;
-    -o-animation: mymove 2.2s linear infinite;
-    -webkit-animation: mymove 2.2s ease-out infinite;
-    animation: mymove 2.2s linear infinite;
+    -moz-animation: mymove 2s linear infinite;
+    -ms-animation: mymove 2s linear infinite;
+    -o-animation: mymove 2s linear infinite;
+    -webkit-animation: mymove 2s ease-out infinite;
+    animation: mymove 2s linear infinite;
 }
 
 
 @-webkit-keyframes mymove {
     0%   {top: 40%;}
-    50%  {top: 42%;}
+    50%  {top: 41.3%;}
     100% {top: 40%;}
 }
 
 /* Standard syntax */
 @-moz-keyframes mymove {
     0%   {top: 40%;}
-    50%  {top: 42%;}
+    50%  {top: 41.3%;}
     100% {top: 40%;}
 }
 
 @-o-keyframes mymove {
     0%   {top: 40%;}
-    50%  {top: 42%;}
+    50%  {top: 41.3%;}
     100% {top: 40%;}
 }
 
 @-ms-keyframes mymove {
     0%   {top: 40%;}
-    50%  {top: 42%;}
+    50%  {top: 41.3%;}
     100% {top: 40%;}
 }
 
 @keyframes mymove {
     0%   {top: 40%;}
-    50%  {top: 42%;}
+    50%  {top: 41.3%;}
     100% {top: 40%;}
 }
 

@@ -1,19 +1,60 @@
-<div class="span12" style="overflow-x: hidden">
-    <div ng-include="'partials/sidemenu.html'"></div>
-</div>
-<div class="span0" style="display: none">
-    <div style="margin-left: 8px" ng-include="'partials/content.html'"></div>
 
-  <!--  <div class="eventHeader">
-        <h2 align="center">Alcatraz</h2>
-    </div>
-    <div class="content-box">
-        <h3>Rules</h3>
-    Like YouTube for 3D animations - that's 3DF33D ... but here are four of my favourites: the wobble dance by Thierry Tranchina, ...
-    heavily optimised for the kinds of calculations that underpin these effects.
-    Alstroemeria Animation 2 Acrylic on stretched canvas. ... swirls and then i made it twirl. looks pretty cool
-    as a tiled background for your . ...
-    red I applied on this red abstract painting some canvas segments for a 3D effect.
-    </div>
-    -->
-</div>
+<!-- Push Wrapper -->
+<div class="mp-pusher" id="mp-pusher" >
+
+    <!-- mp-menu -->
+    <nav id="mp-menu" class="mp-menu">
+        <div class="mp-level">
+            <h2 class="icon icon-world"> Categories</h2>
+
+            <ul>
+                <li ng-repeat="category in menuItems.categories"  class="icon icon-arrow-left" >
+                    <a href="#">{{category.name}}</a>
+                    <div class="mp-level">
+                        <h2 class="icon icon-display">{{category.name}}</h2>
+                        <a class="mp-back" href="#">back</a>
+                        <ul>
+                            <li ng-repeat="event in category.events" class="icon icon-arrow-left" >
+
+
+                                <a  ng-click="fire(event.name)">{{event.name}}</a>
+                                <div class="mp-level" >
+                                    <h2>{{event.name}}</h2>
+                                    <ul id="subMenuRule">
+                                        <li ng-repeat="tab in event.tabs" my-repeat-directive>
+                                            <a ng-click="callTab($index)">{{tab.title}}</a>
+                                        </li>
+                                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- /mp-menu -->
+
+    <div class="scroller"><!-- this is for emulating position fixed of the nav -->
+        <div class="scroller-inner">
+            <!-- Top Navigation -->
+
+            <div class="content clearfix">
+                <div class="block block-40 clearfix" style="z-index: 1000">
+                    <p><a href="#" id="trigger" class="menu-trigger"></a></p>
+                </div>
+
+                <div ng-include="'partials/econtent.html'" style="margin-top: -25px;z-index: -2;margin-left: 35px;"></div>
+
+            </div>
+        </div><!-- /scroller-inner -->
+    </div><!-- /scroller -->
+
+</div><!-- /pusher -->
+
+<script type="text/javascript" src="js/vendor/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/vendor/classie.js"></script>
+<script type="text/javascript" src="js/vendor/mlpushmenu.js"></script>
+<script>
+
+</script>
